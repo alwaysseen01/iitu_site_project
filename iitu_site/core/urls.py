@@ -1,5 +1,5 @@
 """
-URL configuration for iitu_site project.
+URL configuration for core project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -14,17 +14,8 @@ Including another URLconf
     1. Import the 'include()' function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
-from ninja import NinjaAPI
-
-from .views.news_view import router as news_router
-
-api = NinjaAPI()
+from django.urls import path, include
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("api/", api.urls),
+    path("news/", include('news.urls')),
 ]
-
-api.add_router("/", news_router)
