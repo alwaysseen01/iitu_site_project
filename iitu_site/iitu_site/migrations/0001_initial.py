@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='News',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('image', models.ImageField(upload_to='news/')),
+                ('image', models.ImageField(upload_to='news_images/')),
                 ('date', models.DateTimeField()),
                 ('title', models.CharField(max_length=200)),
                 ('content', models.TextField()),

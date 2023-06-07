@@ -34,3 +34,4 @@ def delete_news(request, news_id: int):
         return {"success": True}
     except ObjectDoesNotExist:
         raise HttpError(404, "News not found")
+    
