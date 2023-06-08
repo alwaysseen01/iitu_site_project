@@ -5,8 +5,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from ninja import Router
 from ninja.errors import HttpError
 
-from models import News
-from schemas import NewsIn
+from .models import News
+from .schemas import NewsIn
 
 router = Router()
 
