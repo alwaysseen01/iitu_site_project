@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "iitu-site-project"
+version = "0.1.0"
+description = ""
+authors = ["Igor Ruzhilov <iruzhilov@gmail.com>"]
+readme = "README.md"
+packages = [{include = "iitu_site_project"}]
+
+[tool.poetry.dependencies]
+python = "3.10.5"
+pillow = "^9.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
