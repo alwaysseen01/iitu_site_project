@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
-    'news'
+    'news',
+    'partners',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'iitu_site_db',
         'USER': 'postgres',
-        'PASSWORD': 'vebcamera1',
+        'PASSWORD': 'vebcamera',
         'HOST': 'localhost',
         'PORT': '5432',
     }
