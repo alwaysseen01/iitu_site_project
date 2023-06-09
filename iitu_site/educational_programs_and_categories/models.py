@@ -16,7 +16,7 @@ class Category(models.Model):
 
 class EducationalProgram(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    icon = models.ImageField(upload_to='educational_programs/programs_icons/')
+    icon = models.ImageField(upload_to='educational_programs_and_categories/programs_icons/')
     code = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     faculties_count = models.IntegerField()

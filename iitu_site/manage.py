@@ -20,13 +20,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-    def print_directory_tree(path, indent=''):
-        print(indent + os.path.basename(path))
-        if os.path.isdir(path):
-            for filename in os.listdir(path):
-                print_directory_tree(os.path.join(path, filename), indent + '  ')
-
-
-    print_directory_tree('D:\Python works\iitu_site_project')

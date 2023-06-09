@@ -9,32 +9,32 @@ from ninja.errors import HttpError
 from .models import Partners
 from .schemas import PartnerIn
 
-router = Router()
+router = Router(tags=["Partners"])
 
 
-@router.post("/partners/")
+@router.post("/")
 async def create_partner(request, data: PartnerIn):
     partner = await sync_to_async(Partners.objects.create)(**data.dict())
     return {"id": partner.id}
 
 
-@router.put("/partners/{partner_id}")
+@router.put("/{partner_id}")
 async def update_partner(request, partner_id: int, data: PartnerIn):
     try:
-        partner = await sync_to_async(Partners.objects.get(id=partner_id))
+        partner = await sync_to_async(Partners.objects.get)(id=partner_id)
         for key, value in data.dict().items():
             setattr(partner, key, value)
-        partner.save()
+        await sync_to_async(partner.save)()
         return {"success": True}
     except ObjectDoesNotExist:
         raise HttpError(404, "Partner not found")
 
 
-@router.delete("/partners/{partner_id}")
-async def delete_news(request, partner_id: int):
+@router.delete("/{partner_id}")
+async def delete_partner(request, partner_id: int):
     try:
-        partner = await sync_to_async(Partners.objects.get(id=partner_id))
-        partner.delete()
+        partner = await sync_to_async(Partners.objects.get)(id=partner_id)
+        await sync_to_async(partner.delete)()
         return {"success": True}
     except ObjectDoesNotExist:
         raise HttpError(404, "Partner not found")

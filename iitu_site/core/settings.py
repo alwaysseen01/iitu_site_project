@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'core',  # main(core) app
     'news',  # app
     'partners',  # app
-    'educational_programs',  # app
+    'educational_programs_and_categories',  # app
 ]
 
 MIDDLEWARE = [
