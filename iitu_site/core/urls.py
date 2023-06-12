@@ -21,6 +21,7 @@ from ninja import NinjaAPI
 from news.views import router as news_router
 from partners.views import router as partners_router
 from educational_programs_and_categories.views import program_router, category_router
+from university_advantages.views import router as university_advantages_router
 
 
 api = NinjaAPI()
@@ -29,6 +30,7 @@ api.add_router("news", news_router)
 api.add_router("partners", partners_router)
 api.add_router("educational_programs", program_router)
 api.add_router("categories_of_educational_programs", category_router)
+api.add_router("university_advantages", university_advantages_router)
 
 urlpatterns = [
     path("admin/", admin.site.urls),

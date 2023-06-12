@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'news',  # app
     'partners',  # app
     'educational_programs_and_categories',  # app
+    'university_advantages',  # app
 ]
 
 MIDDLEWARE = [
