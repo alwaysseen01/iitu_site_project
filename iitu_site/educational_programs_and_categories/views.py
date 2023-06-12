@@ -60,6 +60,9 @@ async def list_programs(request):
         raise HttpError(404, "Educational programs not found")
 
 
+# -------------------- EDUCATIONAL PROGRAMS' CATEGORIES ------------------------------------
+
+
 @category_router.post("/")
 async def create_category(request, data_in: CategoryIn):
     category = await sync_to_async(Category.objects.create)(title=data_in.title)
