@@ -31,9 +31,9 @@ async def update_program(request, program_id: int, data_in: ProgramIn):
     try:
         program = await sync_to_async(EducationalProgram.objects.get)(id=program_id)
         program.category_id = data_in.category_id
-        program.image = data_in.image
+        program.icon = data_in.icon
         program.code = data_in.code
-        program.name = data_in.name
+        program.title = data_in.title
         program.faculties_count = data_in.faculties_count
         await sync_to_async(program.save)()
         return {"success": True}

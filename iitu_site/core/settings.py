@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'educational_programs_and_categories',  # app
     'university_advantages',  # app
     'footer_elements_and_categories',  # app
+    'footer_contacts',  # app
 ]
 
 MIDDLEWARE = [
