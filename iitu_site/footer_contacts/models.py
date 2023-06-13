@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class ContactsElement(models.Model):
-    icon = models.ImageField(upload_to='footer_contacts/footer_contacts_icons/')
+    icon = models.ImageField(upload_to='footer_contacts_icons/')
     title = models.CharField(max_length=255)
 
     class Meta:
