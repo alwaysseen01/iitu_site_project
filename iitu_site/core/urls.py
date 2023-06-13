@@ -25,6 +25,8 @@ from university_advantages.views import router as university_advantages_router
 from footer_elements_and_categories.views import element_router, element_category_router
 from footer_contacts.views import router as footer_contacts_router
 
+from .views import index
+
 
 api = NinjaAPI()
 
@@ -40,4 +42,5 @@ api.add_router("categories_of_contacts_elements", footer_contacts_router)  # Foo
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", api.urls),
+    path("", index, name='index'),
 ]
