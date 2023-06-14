@@ -44,5 +44,5 @@ api.add_router("categories_of_contacts_elements", footer_contacts_router)  # Foo
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", api.urls),
-    path("", index, name='index'),
+    path("home/", index, name='index'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
