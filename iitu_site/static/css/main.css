@@ -267,6 +267,7 @@ top: 5px;
     background-image: url(../img/Rectangle\ 2636student.png);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     margin-right: 30px;
     height: 820px;
