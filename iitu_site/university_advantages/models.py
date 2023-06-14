@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class UniversityAdvantage(models.Model):
-    icon = models.ImageField(upload_to='university_advantages/advantages_icons/')
+    icon = models.ImageField(upload_to='advantages_icons/')
     title = models.CharField(max_length=255)
     content = models.TextField()
 
