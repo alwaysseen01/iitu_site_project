@@ -38,12 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',  # main(core) app
-    'news',  # app
-    'partners',  # app
-    'educational_programs_and_categories',  # app
-    'university_advantages',  # app
-    'footer_elements_and_categories',  # app
-    'footer_contacts',  # app
+    # ---- APPS --------------------------
+    'news',
+    'partners',
+    'educational_programs_and_categories',
+    'university_advantages',
+    'footer_elements_and_categories',
+    'footer_contacts',
+    'footer_social_networks'
+    # ------------------------------------
 ]
 
 MIDDLEWARE = [
