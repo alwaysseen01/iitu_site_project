@@ -79,7 +79,20 @@ hr{
 }
 
 .header-link{
+    margin-left: 10px;
     color: white;
+}
+
+.header-link:hover {
+    margin-left: 10px;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
 }
 
 .dropdown{
@@ -303,8 +316,7 @@ margin: 15px;
 }
 
 .main-new-description{
-    position: relative
-    bottom;
+    position: relative bottom;
     color: white;
     font-family: 'Gilroy';
     font-style: normal;
