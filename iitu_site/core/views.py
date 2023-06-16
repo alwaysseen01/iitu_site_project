@@ -5,9 +5,11 @@ from partners.models import Partners
 from footer_contacts.models import ContactsElement
 from footer_elements_and_categories.models import FooterElementCategory, FooterElement
 from educational_programs_and_categories.models import Category, EducationalProgram
+from header_navigation_elements.models import NavigationElement
 
 
 def index(request):
+    header_nav_list = NavigationElement.objects.all()
     news_list = News.objects.all()
     main_news = MainNews.objects.first()
     partners_list = Partners.objects.all()
@@ -19,6 +21,7 @@ def index(request):
     programs_list = EducationalProgram.objects.all()
 
     context = {
+        'header_nav_list': header_nav_list,
         'news_list': news_list,
         'main_news': main_news,
         'partners_list': partners_list,

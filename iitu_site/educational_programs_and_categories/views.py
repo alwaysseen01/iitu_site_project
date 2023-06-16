@@ -72,8 +72,6 @@ async def get_programs_by_category(request, category_id: int):
         raise HttpError(404, "Category not found")
 
 
-
-
 # -------------------- EDUCATIONAL PROGRAMS' CATEGORIES ------------------------------------
 
 

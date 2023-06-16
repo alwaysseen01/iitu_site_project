@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'university_advantages',
     'footer_elements_and_categories',
     'footer_contacts',
-    'footer_social_networks'
+    'footer_social_networks',
+    'header_navigation_elements'
     # ------------------------------------
 ]
 

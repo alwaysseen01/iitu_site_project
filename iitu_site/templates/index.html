@@ -14,23 +14,19 @@
 <body>
     <div class="header">
         <div class="header_block logo"><img src="../static/img/image 58logo.svg" alt=""></div>
-        <div class="header_block"><a class="header-link" href="#">Главная</a></div> 
-        <div class="header_block"><a class="header-link" href="#">О нас</a></div>
-        <div class="header_block dropdown">
-            <div><a class="mainmenubtn" href="#"></a>Поступающим</div>
-            <div class="dropdown-child">
-                <div class="grid">
-                    <a class="dropdown-element" href="#">Бакалавриат</a>
-                    <a class="dropdown-element" href="#">Магистратура</a>
-                    <a class="dropdown-element" href="#">Докторантура</a>
-                </div>
-            </div>
-        </div>
-        <div class="header_block"><a class="header-link" href="#">Студентам</a></div>
-        <div class="header_block"><a class="header-link" href="#">Кафедра</a></div>
-        <div class="header_block"><a class="header-link" href="#">Библиотека</a></div> 
-        <div class="header_block"><a class="header-link" href="#">Контакты</a></div>
-        <div class="header_block"><a class="header-link" href="#">Блог Ректора</a></div>
+        {% for nav_element in header_nav_list %}
+            <div class="header_block"><a class="header-link" href="#">{{ nav_element.title }}</a></div>
+        {% endfor %}
+{#        <div class="header_block dropdown">#}
+{#            <div><a class="mainmenubtn" href="#"></a>Поступающим</div>#}
+{#            <div class="dropdown-child">#}
+{#                <div class="grid">#}
+{#                    <a class="dropdown-element" href="#">Бакалавриат</a>#}
+{#                    <a class="dropdown-element" href="#">Магистратура</a>#}
+{#                    <a class="dropdown-element" href="#">Докторантура</a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
         <div class="header_block language"><a class="header-link" href="#">RU</a></div>
     </div>
     <div class="description-container">
