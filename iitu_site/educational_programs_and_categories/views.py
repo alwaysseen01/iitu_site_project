@@ -60,6 +60,20 @@ async def list_programs(request):
         raise HttpError(404, "Educational programs not found")
 
 
+@program_router.get("/{category_id}")
+async def get_programs_by_category(request, category_id: int):
+    try:
+        category = await sync_to_async(Category.objects.get)(id=category_id)
+        programs = await sync_to_async(list)(EducationalProgram.objects.filter(category=category))
+        if not programs:
+            raise HttpError(404, "Programs of this category are not found")
+        return [ProgramOut.from_orm(program) for program in programs]
+    except ObjectDoesNotExist:
+        raise HttpError(404, "Category not found")
+
+
+
+
 # -------------------- EDUCATIONAL PROGRAMS' CATEGORIES ------------------------------------
 
 

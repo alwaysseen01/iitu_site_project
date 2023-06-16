@@ -4,6 +4,7 @@ from university_advantages.models import UniversityAdvantage
 from partners.models import Partners
 from footer_contacts.models import ContactsElement
 from footer_elements_and_categories.models import FooterElementCategory, FooterElement
+from educational_programs_and_categories.models import Category, EducationalProgram
 
 
 def index(request):
@@ -14,6 +15,9 @@ def index(request):
     contacts_list = ContactsElement.objects.all()
     footer_categories = FooterElementCategory.objects.all()
     footer_elements = FooterElement.objects.all()
+    categories_list = Category.objects.all()
+    programs_list = EducationalProgram.objects.all()
+
     context = {
         'news_list': news_list,
         'main_news': main_news,
@@ -22,5 +26,8 @@ def index(request):
         'contacts_list': contacts_list,
         'footer_categories': footer_categories,
         'footer_elements': footer_elements,
+        'categories_list': categories_list,
+        'programs_list': programs_list,
     }
+
     return render(request, 'index.html', context)
