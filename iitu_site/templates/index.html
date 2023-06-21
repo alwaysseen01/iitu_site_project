@@ -5,33 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
-    <!-- {% load static %}
-    <link rel="stylesheet" href="{% static 'css/main.css' %}"> -->
     <link rel="stylesheet" href="../static/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
     
 </head>
 <body>
     <div class="header">
-        <div class="header_block logo"><img src="../static/img/image 58logo.svg" alt=""></div>
-        <div class="header_block"><a class=" header-link" href="#">Главная</a></div> 
-        <div class="header_block"><a class="header-link" href="#">О нас</a></div>
-        <div class="header_block dropdown">
-            <div><a class="mainmenubtn header-link" href="#">Поступающим</a></div>
+        <button class="header_block logo"><img src="../static/img/image 58logo.svg" alt=""></button>
+        <button class="header_block">Главная</button> 
+        <button class="header_block">О нас</button>
+        <div class="dropdown">
+            <button class="header_block mainmenubtn">Поступающим</button>
             <div class="dropdown-child">
                 <div class="grid">
-                    <a class="dropdown-element header-link" href="#">Бакалавриат</a>
-                    <a class="dropdown-element header-link" href="#">Магистратура</a>
-                    <a class="dropdown-element header-link" href="#">Докторантура</a>
+                    <a class="dropdown-element" href="">Бакалавриат</a>
+                    <div class="horiLine"></div>
+                    <a class="dropdown-element" href="">Магистратура</a>
+                    <div class="horiLine"></div>
+                    <a class="dropdown-element" href="">Докторантура</a>
                 </div>
             </div>
         </div>
-        <div class="header_block"><a class="header-link" href="#">Студентам</a></div>
-        <div class="header_block"><a class="header-link" href="#">Кафедра</a></div>
-        <div class="header_block"><a class="header-link" href="#">Библиотека</a></div> 
-        <div class="header_block"><a class="header-link" href="#">Контакты</a></div>
-        <div class="header_block"><a class="header-link" href="#">Блог Ректора</a></div>
-        <div class="header_block language"><a class="header-link" href="#">RU</a></div>
+        <button class="header_block">Студентам</button>
+        <button class="header_block">Кафедра</button>
+        <button class="header_block">Библиотека</button> 
+        <button class="header_block">Контакты</button>
+        <button class="header_block">Блог Ректора</button>
+        <button class="header_block language">RU</button>
     </div>
     <div class="description-container">
         <div class="description-left">
@@ -42,7 +42,7 @@
                 <div class="description">
                     Международный университет информационных технологий - ведущее высшее учебное заведение, в Центрально-Азиатском регионе в области подготовки квалифицированных, международно-признанных специалистов
                 </div>
-                <a href="#" class="button">Получить консультацию</a>
+                <a href="" class="button">Получить консультацию</a>
             </div>
             <div class="counters">
                 <div id="btnleft"><img src="../static/img/circle_arrow.svg" alt=""></div>
@@ -61,54 +61,83 @@
         <hr class="chapter-heading-hr">
         <div class="chapter-heading">НАШИ ПАРТНЕРЫ</div>
         <div class="partner-images">
-            {% for partner in partners_list %}
-                <img class="partner-img" src="{% get_media_prefix %}{{ partner.image }}" alt="NO IMAGE">
-            {% endfor %}
+            <img class="partner-img" src="../static/img/image 58redhat.png" alt="">
+            <img class="partner-img" src="../static/img/image 59Allvet.png" alt="">
+            <img class="partner-img" src="../static/img/image 60bolashak.png" alt="">
+            <img class="partner-img" src="../static/img/image 61sas.png" alt="">
+            <img class="partner-img" src="../static/img/image 62ibm.png" alt="">
         </div>
     </div>
     <div class="news">
-    <hr class="chapter-heading-hr">
-    <div class="chapter-heading">НОВОСТИ</div>
-    <div class="news-images">
-        <div class="main-new">
-            <div class="main-new-text">
-                <div class="main-new-date-box">
-                    {{ main_news.date|date:"d F Y" }}
-                </div>
-                <div class="main-new-description">
-                    <div class="main-new-description-header">{{ main_news.title }}</div>
-                    <div class="main-new-description-text">{{ main_news.content }}</div>
+        <hr class="chapter-heading-hr">
+        <div class="chapter-heading">НОВОСТИ</div>
+        <div class="news-images">
+            <div class="main-new">
+                <div class="main-new-text">
+                    <div class="main-new-date-box">
+                        25 сентября 2022
+                    </div>
+                    <div class="main-new-description">
+                        <div class="main-new-description-header">Студенты IITU вышли в Forbes</div>
+                        <div class="main-new-description-text">Высококвалифицированный профессорско-преподавательский состав, располагающий условиями для свободного научного поиска, творчества и максимально реализующий свой интеллектуальный </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <img id="vertical-line" src="../static/img/Line 3vertical-line.svg" alt="">
-        <div class="scrollable">
-            {% for news in news_list %}
-            <div class="scrollable-block">
-                <div class="scrollable-img-container">
-                    <img class="scrollable-img" src="{% get_media_prefix %}{{ news.image }}" alt="{{ news.title }}">
-                    <div class="date-box">{{ news.date|date:"d F Y" }}</div>
+            <img id="vertical-line" src="../static/img/Line 3vertical-line.svg" alt="">
+            <div class="scrollable">
+               <div class="scrollable-block">
+                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
+                    <div class="date-box">28 октября 2022</div>
                 </div>
                 <div class="scrollable-text">
-                    <div class="scrollable-heading">{{ news.title }}</div>
-                    <div class="scrollable-description">{{ news.content|truncatewords:20 }}</div>
-                    <div><a class="scrollable-button" href="#">Подробнее  ></a></div>
+                    <div class="scrollable-heading">Международный турнир</div>
+                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
+                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
                 </div>
+               </div>
+               <div class="scrollable-block">
+                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
+                    <div class="date-box">28 октября 2022</div>
+                </div>
+                <div class="scrollable-text">
+                    <div class="scrollable-heading">Международный турнир</div>
+                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
+                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
+                </div>
+               </div>
+               <div class="scrollable-block">
+                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
+                    <div class="date-box">28 октября 2022</div>
+                </div>
+                <div class="scrollable-text">
+                    <div class="scrollable-heading">Международный турнир</div>
+                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
+                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
+                </div>
+               </div>
+               <div class="scrollable-block">
+                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
+                    <div class="date-box">28 октября 2022</div>
+                </div>
+                <div class="scrollable-text">
+                    <div class="scrollable-heading">Международный турнир</div>
+                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
+                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
+                </div>
+               </div>
             </div>
-            {% endfor %}
         </div>
     </div>
-</div>
     <div class="edu-programs">
         <hr class="chapter-heading-hr">
         <div class="chapter-heading">ОБРАЗОВАТЕЛЬНЫЕ ПРОГРАММЫ</div>
         <div class="edu-programs-grids">
             <div class="grids-top-buttons">
-                <a class="top-button-active" href="#">Бакалавриат</a>
-                <a class="top-button-inactive" href="#">Магистратура</a>
-                <a class="top-button-inactive" href="#">Докторантура</a>
+                <button onclick="openCity(event, 'bach')" class="top-button active" href="">Бакалавриат</button>
+                <button onclick="openCity(event, 'mast')" class="top-button" href="">Магистратура</button>
+                <button onclick="openCity(event, 'dock')" class="top-button" href="">Докторантура</button>
             </div>
-            <div class="grids-bottom-buttons">
+            <div id="bach" class="grids-bottom-buttons">
                 <div class="gridcontainer">
                     <div class="flex-container">
                         <img src="../static/img/Group 1066management.svg" alt="">
@@ -152,6 +181,82 @@
                 <div class="gridcontainer">
                     <div class="flex-container">
                         <img src="../static/img/Group 1066management.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+            </div>
+            <div id="mast" class="grids-bottom-buttons" style="display: none;">
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1071.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1071.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1071.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1071.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1071.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+            </div>
+            <div id="dock" class="grids-bottom-buttons" style="display: none;">
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1067.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1067.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1067.svg" alt="">
+                        <div class="code-name" >B044</div>
+                    </div>
+                    <div class="programm-name" >Менеджмент и управление</div>
+                    <div class="faculty">Факультеты: 2</div>
+                </div>
+                <div class="gridcontainer">
+                    <div class="flex-container">
+                        <img src="../static/img/Group 1067.svg" alt="">
                         <div class="code-name" >B044</div>
                     </div>
                     <div class="programm-name" >Менеджмент и управление</div>
@@ -223,5 +328,6 @@
         </div>
         <div class="rights">Copyright All Rights Reserved 2022, International IT University</div>
     </div>
+    <script src="../static/js/script.js"></script>
 </body>
 </html>

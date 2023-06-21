@@ -32,7 +32,7 @@
     padding:0;
 }
 
-html,body{
+html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -74,29 +74,29 @@ hr{
 .header_block{
     align-self: center;
     color: white;
-    font-size: 20px;
-    flex-grow: 1;
-}
-
-.header-link{
-    margin-left: 10px;
-    color: white;
-}
-
-.header-link:hover {
-    margin-left: 10px;
+    background-color: #992439;
     font-family: 'Montserrat';
 font-style: normal;
-font-weight: 700;
+font-weight: 400;
 font-size: 20px;
 line-height: 24px;
-align-items: center;
-text-align: center;
-color: #FFFFFF;
+    flex-grow: 1;
+    height: 100%;
+    border-width: 0px;
+}
+
+.header_block:hover{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
 }
 
 .dropdown{
     cursor: pointer;
+    height: 100%;
 }
 
 .dropdown:hover .dropdown-child {
@@ -114,12 +114,37 @@ color: #FFFFFF;
     min-width: 200px;
 }
 
+.dropdown-element:hover {
+    display: block;
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 24px;
+    color: #FFFFFF;
+    opacity: 100%;
+}
+
 .grid{
     display: grid;
 }
 
 .dropdown-element{
 padding: 20px 13px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+color: #FFFFFF;
+opacity: 0.8;
+}
+
+.horiLine{
+    width: 200px;
+height: 0px;
+border: 1px solid rgba(255, 255, 255, 0.5);
+margin: 0 50px 0 20px;
 }
 
 .logo{
@@ -183,9 +208,14 @@ DISPLAY: grid;
 color: white;
 }
 
+.button:hover{
+    transform: scale(99%);
+}
+
 .counters{
     display: flex;
     margin-top: 220px;
+    margin-bottom: 185px;
 }
 
 #btnleft{
@@ -316,7 +346,8 @@ margin: 15px;
 }
 
 .main-new-description{
-    position: relative bottom;
+    position: relative
+    bottom;
     color: white;
     font-family: 'Gilroy';
     font-style: normal;
@@ -436,17 +467,25 @@ margin-bottom: 16px;
     margin-left: 100px;
 }
 
-.top-button-active{
+.top-button{
     font-family: 'SF Pro Display';
 font-style: normal;
 font-weight: 400;
 font-size: 32px;
 line-height: 38px;
-color: white;
-background: #992439;
-border-radius: 20px;
 padding: 25px 99px;
 margin-right: 20px;
+border-radius: 20px;
+border-width: 0px;
+}
+
+.active{
+    color: white;
+background: #992439;
+}
+
+.top-button:hover {
+    transform: scale(0.95);
 }
 
 .top-button-inactive{
