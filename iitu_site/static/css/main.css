@@ -139,7 +139,7 @@ font-weight: 700;
 }
 
 .horiLine{
-    width: 250px;
+    width: 300px;
 height: 0px;
 border: 1px solid rgba(255, 255, 255, 0.5);
 margin: 0 50px 0 20px;
@@ -160,7 +160,7 @@ margin: 0 50px 0 20px;
     position: absolute;
     flex-direction: column;
     top: 0px;
-    left: 324px;
+    left: 373px;
     background: rgba(0, 0, 0, 0.50);
 }
 
@@ -178,7 +178,7 @@ margin: 0 50px 0 20px;
     position: absolute;
     flex-direction: column;
     top: 0px;
-    left: 323px;
+    left: 373px;
     background: rgba(0, 0, 0, 0.50);
 }
 
