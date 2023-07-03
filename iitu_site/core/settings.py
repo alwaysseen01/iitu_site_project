@@ -15,6 +15,7 @@ from pathlib import Path
 from django.templatetags import static
 
 from .db_config import DB_NAME, DB_PASS, DB_HOST, DB_USER, DB_PORT
+from .db_config import DB_NAME, DB_USER, DB_PASS, DB_HOST, DB_PORT
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
