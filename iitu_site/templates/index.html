@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="../static/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300" rel="stylesheet">
     
 </head>
 <body>
     <div class="header">
-        <button class="header_block logo"><img src="../static/img/image 58logo.svg" alt=""></button>
+        <button class="header_block logo"><img src="../static/img/image 58logo.png" alt=""></button>
+        <button class="header_block mobile-menu"><img src="../static/img/Group 3656m-menu.svg" alt=""></button>
         <button class="header_block">Главная</button> 
         <button class="header_block">О нас</button>
         <div class="dropdown header_block">
@@ -101,12 +101,12 @@
                 <div id="btnright"><img src="../static/img/arrow.svg" alt=""></div>
                 <div class="numbers">
                     <div id="cur">1</div>
-                    <div id="slash"><img src="../static/img/Line 2.svg" alt=""></div>
+                    <div id="slash"></div>
                     <div id="val">4</div>
                 </div>
             </div>
         </div>
-        <div><img  class="description-img" src="../static/img/Rectangle 2631.png" alt=""></div>
+        <div><img  class="description-img" src="../static/img/Rectangle 2703.png" alt=""></div>
     </div>
 
     <div class="partners">
@@ -342,13 +342,24 @@
                 </div>
             </div>
             <div class="advantages-cardbox">
-                {% for advantage_card in advantages_list %}
-                        <div class="advantages-card">
-                            <img src="{% get_media_prefix %}{{ advantage_card.icon }}" alt="">
-                            <div class="advantages-card-heading">{{ advantage_card.title }}</div>
-                            <div class="advantages-card-text">{{ advantage_card.content }}</div>
-                        </div>
-                {% endfor %}
+                <div class="advantages-card">
+                    <img src="../static/img/Rectangle 2672a.svg" alt="">
+                    <img src="../static/img/Frame 52circle.svg" alt="">
+                    <div class="advantages-card-heading">Высокий научно-педагогический потенциал</div>
+                    <div class="advantages-card-text">МУИТ является единственным ВУЗом в Казахстане, получившим в 2019 году институциональную международную аккредитацию ASIIN</div>
+                </div>
+                <div class="advantages-card">
+                    <img src="../static/img/Rectangle 2672a.svg" alt="">
+                    <img src="../static/img/Frame 52circle.svg" alt="">
+                    <div class="advantages-card-heading">Высокий научно-педагогический потенциал</div>
+                    <div class="advantages-card-text">МУИТ является единственным ВУЗом в Казахстане, получившим в 2019 году институциональную международную аккредитацию ASIIN</div>
+                </div>
+                <div class="advantages-card">
+                    <img src="../static/img/Rectangle 2672a.svg" alt="">
+                    <img src="../static/img/Frame 52circle.svg" alt="">
+                    <div class="advantages-card-heading">Высокий научно-педагогический потенциал</div>
+                    <div class="advantages-card-text">МУИТ является единственным ВУЗом в Казахстане, получившим в 2019 году институциональную международную аккредитацию ASIIN</div>
+                </div>
             </div>
         </div>
         <div class="advantages-svgs">
@@ -360,23 +371,34 @@
     <div class="footer-container">
         <div class="footer-top">
         <div class="footer-images">
-            <img src="../static/img/image 58logo.svg" alt="">
+            <img src="../static/img/image 58logo.png" alt="">
             <img src="../static/img/Group 3652 (1).svg" alt="">
         </div>
         <ul>
             <li>КОНТАКТЫ</li>
-            {% for contact in contacts_list %}
-                <li><img class="no-bottom" src="{% get_media_prefix %} {{ contact.icon }}" alt="">{{ contact.title }}</li>
-            {% endfor %}
+            <li><img class="no-bottom" src="../static/img/Group 3646mail.svg" alt="">info@iitu.kz</li>
+            <li><img class="no-bottom" src="../static/img/Group 3643phone.svg" alt="">+7 (727) 244 51 03</li>
+            <li><img class="no-bottom" src="../static/img/Group 3638location.svg" alt="">Манаса 34/1</li>
         </ul>
-        {% for category in footer_categories %}
-            <ul>
-                <li>{{ category.title }}</li>
-                {% for element in footer_elements %}
-                    <li>{{ element.title }}</li>
-                {% endfor %}
-            </ul>
-        {% endfor %}
+        <ul>
+            <li>ОБ УНИВЕРСИТЕТЕ</li>
+            <li>Приемная коммиссия</li>
+            <li>Миссия и Стратегия</li>
+            <li>COVID-19</li>
+            <li>3D Tour</li>
+        </ul>
+        <ul>
+            <li>СТУДЕНТАМ</li>
+            <li>Студенческие организации</li>
+            <li>Внутренняя Почта</li>
+            <li>Ящик доверия</li>
+            <li>dl</li>
+        </ul>
+        <ul>
+            <li>СОТРУДНИЧЕСТВО</li>
+            <li>Академическая мобильность</li>
+            <li>Партнеры</li>
+        </ul>
         </div>
         <div class="rights">Copyright All Rights Reserved 2022, International IT University</div>
     </div>
