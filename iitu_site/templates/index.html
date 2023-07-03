@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,23 +11,11 @@
 </head>
 <body>
     <div class="header">
-<<<<<<< HEAD
         <div class="header_block logo"><img src="../static/img/image 58logo.svg" alt=""></div>
         {% for nav_element in header_nav_list %}
             <div class="header_block"><a class="header-link" href="#">{{ nav_element.title }}</a></div>
         {% endfor %}
-{#        <div class="header_block dropdown">#}
-{#            <div><a class="mainmenubtn" href="#"></a>Поступающим</div>#}
-{#            <div class="dropdown-child">#}
-{#                <div class="grid">#}
-{#                    <a class="dropdown-element" href="#">Бакалавриат</a>#}
-{#                    <a class="dropdown-element" href="#">Магистратура</a>#}
-{#                    <a class="dropdown-element" href="#">Докторантура</a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
         <div class="header_block language"><a class="header-link" href="#">RU</a></div>
-=======
         <button class="header_block logo"><img src="../static/img/image 58logo.png" alt=""></button>
         <button class="header_block mobile-menu"><img src="../static/img/Group 3656m-menu.svg" alt=""></button>
         <button class="header_block">Главная</button> 
@@ -101,7 +90,6 @@
         <button class="header_block">Контакты</button>
         <button class="header_block">Блог Ректора</button>
         <button class="header_block language">RU</button>
->>>>>>> 6e469a41cb72243ce92d1c27eeecba8457a72709
     </div>
     <div class="description-container">
         <div class="description-left">
@@ -393,12 +381,10 @@
             <img src="../static/img/Group 3652 (1).svg" alt="">
         </div>
         <ul>
-<<<<<<< HEAD
             <li>CONTACTS</li>
             {% for contact in contacts_list %}
                 <li><img class="no-bottom" src="{% get_media_prefix %} {{ contact.icon }}" alt="">{{ contact.title }}</li>
             {% endfor %}
-=======
             <li>КОНТАКТЫ</li>
             <li><img class="no-bottom" src="../static/img/Group 3646mail.svg" alt="">info@iitu.kz</li>
             <li><img class="no-bottom" src="../static/img/Group 3643phone.svg" alt="">+7 (727) 244 51 03</li>
@@ -422,7 +408,6 @@
             <li>СОТРУДНИЧЕСТВО</li>
             <li>Академическая мобильность</li>
             <li>Партнеры</li>
->>>>>>> 6e469a41cb72243ce92d1c27eeecba8457a72709
         </ul>
         </div>
         <div class="rights">Copyright All Rights Reserved 2022, International IT University</div>
