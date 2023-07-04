@@ -11,85 +11,64 @@
 </head>
 <body>
     <div class="header">
-        <div class="header_block logo"><img src="../static/img/image 58logo.svg" alt=""></div>
-        {% for nav_element in header_nav_list %}
-            <div class="header_block"><a class="header-link" href="#">{{ nav_element.title }}</a></div>
-        {% endfor %}
-        <div class="header_block language"><a class="header-link" href="#">RU</a></div>
         <button class="header_block logo"><img src="../static/img/image 58logo.png" alt=""></button>
-        <button class="header_block mobile-menu"><img src="../static/img/Group 3656m-menu.svg" alt=""></button>
-        <button class="header_block">Главная</button> 
-        <button class="header_block">О нас</button>
-        <div class="dropdown header_block">
-            <button class=" mainmenubtn header_block">Поступающим</button>
-            <div class="dropdown-child">
-                <div class="grid">
-                    <div class="dropdown-left dropdown-element">
-                        <a class="left-mainmenubtn">Бакалавриат</a>
-                        <div class="dropdown-left-child" >
-                            <div class="grid">
-                                <div class="dropdown-left2 dropdown-element ">
-                                    <a class="mainmenubtn">Куда можно поступить ?</a>
-                                    <div class="dropdown-left2-child" >
-                                        <div class="grid">
-                                            <a class="dropdown-element" href="">Образовательные программы</a>
-                                            <div class="horiLine"></div>
-                                            <a class="dropdown-element" href="">Классификаторы</a>
-                                            <div class="horiLine"></div>
-                                            <a class="dropdown-element" href="">Профориентационный тест</a>
-                                            <div class="horiLine"></div>
-                                            <a class="dropdown-element" href="">Профильные предметы</a>
-                                        </div>
+
+        {% for nav_element in header_nav_list %}
+            {% if nav_element.is_dropdown %}
+                <div class="dropdown header_block">
+                    <button class=" mainmenubtn header_block">{{ nav_element.title }}</button>
+                    <div class="dropdown-child">
+                        <div class="grid">
+                            {% for dropdown_1 in header_dropdown_1_list %}
+                                {% if dropdown_1.parent_navigation_element == nav_element %}
+                                    <div class="dropdown-left dropdown-element">
+                                        {% if dropdown_1.is_dropdown %}
+                                            <a class="left-mainmenubtn">{{ dropdown_1.title }}</a>
+                                            <div class="dropdown-left-child">
+                                                <div class="grid">
+                                                    {% for dropdown_2 in header_dropdown_2_list %}
+                                                        {% if dropdown_2.parent_dropdown_navigation_element == dropdown_1 %}
+                                                            <div class="dropdown-left2 dropdown-element ">
+                                                                <a class="mainmenubtn" href="">{{ dropdown_2.title }}</a>
+                                                                {% if dropdown_2.is_dropdown %}
+                                                                    <div class="dropdown-left2-child">
+                                                                        <div class="grid">
+                                                                            {% for dropdown_3 in header_dropdown_3_list %}
+                                                                                {% if dropdown_3.parent_dropdown_navigation_element == dropdown_2 %}
+                                                                                    <a class="dropdown-element" href="">{{ dropdown_3.title }}</a>
+                                                                                    {% if not forloop.last %}
+                                                                                        <div class="horiLine"></div>
+                                                                                    {% endif %}
+                                                                                {% endif %}
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                {% endif %}
+                                                            </div>
+                                                            {% if not forloop.last %}
+                                                                    <div class="horiLine"></div>
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        {% else %}
+                                            <a class="left-mainmenubtn">{{ dropdown_1.title }}</a>
+                                        {% endif %}
                                     </div>
-                                </div>
-                                <div class="horiLine"></div>
-                                <div class="dropdown-left2 dropdown-element ">
-                                    <a class="mainmenubtn">Как поступить?</a>
-                                    <div class="dropdown-left2-child" >
-                                        <div class="grid">
-                                            <a class="dropdown-element" href="">После колледжа</a>
-                                            <div class="horiLine"></div>
-                                            <a class="dropdown-element" href="">Платное отделение</a>
-                                            <div class="horiLine"></div>
-                                            <a class="dropdown-element" href="">Конкурс грантов</a>
-                                            <div class="horiLine"></div>
-                                            <a class="dropdown-element" href="">Журналистика</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="horiLine"></div>
-                                <a class="dropdown-element" href="">Если я уже поступил?</a>
-                                <div class="horiLine"></div>
-                                <a class="dropdown-element" href="">Ориентационная неделя</a>
-                            </div>
+                                    {% if not forloop.last %}
+                                        <div class="horiLine"></div>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
                         </div>
                     </div>
-                    <div class="horiLine"></div>
-                    <div class="dropdown-left dropdown-element ">
-                        <a class="mainmenubtn">Магистратура</a>
-                        <div class="dropdown-left-child" >
-                            <div class="grid">
-                                <a class="dropdown-element" href="">Куда можно поступить ?</a>
-                                <div class="horiLine"></div>
-                                <a class="dropdown-element" href="">Как поступить?</a>
-                                <div class="horiLine"></div>
-                                <a class="dropdown-element" href="">Если я уже поступил?</a>
-                                <div class="horiLine"></div>
-                                <a class="dropdown-element" href="">Ориентационная неделя</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="horiLine"></div>
-                    <a class="dropdown-element" href="">Докторантура</a>
                 </div>
-            </div>
-        </div>
-        <button class="header_block">Студентам</button>
-        <button class="header_block">Кафедра</button>
-        <button class="header_block">Библиотека</button> 
-        <button class="header_block">Контакты</button>
-        <button class="header_block">Блог Ректора</button>
-        <button class="header_block language">RU</button>
+            {% else %}
+                <button class="header_block"> {{ nav_element.title }} </button>
+            {% endif %}
+        {% endfor %}
+        <button class="header_block mobile-menu"><img src="../static/img/Group 3656m-menu.svg" alt=""></button>
     </div>
     <div class="description-container">
         <div class="description-left">

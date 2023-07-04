@@ -1,0 +1,951 @@
+@font-face {
+  font-family: SF Pro Display;
+  src: url(../font/SFPRODISPLAYREGULAR.OTF) format("opentype");
+  font-style: normal;
+}
+@font-face {
+  font-family: Proxima Nova;
+  src: url(../font/proximanova_regular.ttf) format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(../font/gilroy-regular.ttf) format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(../font/gilroy-bold.ttf) format("truetype");
+  font-style: bold;
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(../font/gilroy-light.ttf) format("truetype");
+  font-style: light;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+  background-color: white;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  display: block;
+  height: 0.0625rem;
+  border: 0;
+  border-top: 0.3125rem solid #992439;
+  margin: 1em 0;
+  padding: 0;
+}
+
+html {
+  font-size: 0.8333333vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  background-color: #992439;
+  align-items: center;
+  width: auto;
+  height: 6.25rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.mainmenubtn {
+  height: 6.25rem;
+  border-width: 0;
+  width: 100%;
+}
+
+.left-mainmenubtn {
+  position: static;
+}
+
+.header_block {
+  align-self: center;
+  color: white;
+  background-color: #992439;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  flex-grow: 1;
+  height: 100%;
+  border-width: 0;
+}
+
+.header_block:hover {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+}
+
+.dropdown {
+  height: 100%;
+  position: relative;
+}
+
+.dropdown:hover .dropdown-child {
+  display: flex;
+}
+
+.dropdown-child {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.3125rem);
+  top: 6.25rem;
+  left: 1.5625rem;
+}
+
+.dropdown-element {
+  padding: 1.2rem 0 1.2rem 1.2rem;
+  color: #FFF;
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.dropdown-element:hover {
+  color: #FFF;
+  font-size: 1.2rem;
+  font-family: Montserrat;
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+}
+
+.horiLine {
+  width: 18.75rem;
+  height: 0;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.5);
+  margin: 0 3.125rem 0 1.2rem;
+}
+
+.dropdown-left {
+  position: relative;
+}
+
+.dropdown-left:hover .dropdown-left-child {
+  display: flex;
+}
+
+.dropdown-left-child {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 23.3125rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dropdown-left2 {
+  position: relative;
+}
+
+.dropdown-left2:hover .dropdown-left2-child {
+  display: flex;
+}
+
+.dropdown-left2-child {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 0;
+  left: 23.3125rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 4.6875rem;
+  height: 3.125rem;
+  margin-left: 2.1875rem;
+}
+
+.logo > img {
+  width: 4.6875rem;
+  height: 3.125rem;
+}
+
+.language {
+  flex-grow: 3;
+  text-align: center;
+}
+
+.description-container {
+  display: flex;
+  max-width: 110rem;
+  align-self: center;
+}
+
+.description-left {
+  padding: 16.81rem 5rem 0;
+}
+
+.descriptionbtn {
+  display: grid;
+  max-width: 54.6875rem;
+  margin-right: 6.875rem;
+}
+
+.heading {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.description {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  margin-top: 1.2rem;
+}
+
+.button {
+  margin-top: 1.88rem;
+  width: 29.875rem;
+  height: 5.125rem;
+  background: #992439;
+  border-radius: 0.3125rem;
+  font-family: "Gilroy";
+  font-weight: 700;
+  font-size: 1.75rem;
+  line-height: 2.1875rem;
+  text-align: center;
+  align-items: center;
+  DISPLAY: grid;
+  color: white;
+}
+
+.button:hover {
+  transform: scale(99%);
+}
+
+.counters {
+  display: flex;
+  margin-top: 13.69rem;
+  margin-bottom: 10.62rem;
+}
+
+#btnleft {
+  margin-right: 1.875rem;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+#btnleft > img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+#btnright {
+  margin-right: 3.75rem;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+#btnright > img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+/*  > img{
+    width: 3.75rem;
+    height: 3.75rem;
+} */
+.numbers {
+  display: flex;
+}
+
+#cur {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.625rem;
+  position: relative;
+  top: -0.25rem;
+  margin-right: 0.3125rem;
+}
+
+#slash {
+  margin-right: 0.1875rem;
+  width: 3.80225rem;
+  height: 0.1875rem;
+  background-color: #333333;
+  transform: rotate(115.3deg);
+  position: relative;
+  top: 1.6rem;
+  right: 1rem;
+}
+
+#val {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 3.625rem;
+  position: relative;
+  top: 0.3125rem;
+  right: 2.2rem;
+}
+
+.description-img {
+  margin-top: 2.5rem;
+  width: 43.75rem;
+  height: 62.5rem;
+}
+
+.partners {
+  position: relative;
+}
+
+.chapter-heading-hr {
+  position: relative;
+}
+
+.chapter-heading {
+  display: block;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.6875rem;
+  margin-left: 5rem;
+  background-color: white;
+  position: absolute;
+  top: -1.5625rem;
+  padding: 0 1.875rem;
+}
+
+.partner-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding: 4.375rem 0 11.25rem;
+}
+
+.partner-img {
+  height: 6.25rem;
+  max-width: 18.75rem;
+  object-fit: contain;
+}
+
+.news {
+  position: relative;
+  padding: 0 0 5.625rem;
+}
+
+.news-images {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem;
+  max-width: 112.5rem;
+}
+
+.main-new {
+  background-image: url(../img/Rectangle\ 2636student.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-right: 1.875rem;
+  height: 51.25rem;
+  width: 56.25rem;
+  border-radius: 1.2rem;
+}
+
+.news-image {
+  width: 100%;
+}
+
+.main-new-text {
+  position: absolute;
+  width: 100%;
+  text-align: start;
+  bottom: 0;
+}
+
+.main-new-date-box {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.25rem);
+  border-radius: 0.625rem;
+  padding: 1.0625rem 0;
+  width: 16.875rem;
+  text-align: center;
+  margin: 0.9375rem;
+}
+
+.main-new-description {
+  position: relative bottom;
+  color: white;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: start;
+  padding: 0.625rem 1.375rem;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(1.25rem);
+  border-radius: 0 1.2rem 1.2rem;
+  padding: 2.5rem;
+}
+
+.main-new-description-header {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.main-new-description-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  width: auto;
+}
+
+#vertical-line {
+  margin: 3.75rem 0 3.75rem;
+  padding-right: 1.875rem;
+  height: 43.75rem;
+}
+
+.scrollable {
+  width: 52.9375rem;
+  height: 51.25rem;
+  overflow-x: auto;
+  display: grid;
+  gap: 1.25rem;
+  overflow-x: hidden;
+}
+
+.scrollable-block {
+  height: 15rem;
+  width: 52.9375rem;
+  border: 0.1875rem #000000;
+  display: flex;
+  align-items: center;
+}
+
+.scrollable-img {
+  width: 23rem;
+  height: 14rem;
+  margin-right: 1.875rem;
+}
+
+.scrollable-img-container {
+  position: relative;
+}
+
+.date-box {
+  position: absolute;
+  left: 0.625rem;
+  bottom: 0.625rem;
+  color: white;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: center;
+  padding: 0.625rem 1.375rem;
+  backdrop-filter: blur(0.3125rem);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.scrollable-text {
+  width: 25rem;
+}
+
+.scrollable-heading {
+  font-family: "Gilroy";
+  font-style: bold;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.scrollable-description {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  margin-bottom: 1rem;
+}
+
+.scrollable-button {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  color: #992439;
+}
+
+.edu-programs {
+  position: relative;
+}
+
+.grids-top-buttons {
+  display: flex;
+  margin-top: 7.9375rem;
+  margin-left: 6.25rem;
+}
+
+.top-button {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  padding: 1.5625rem 6.1875rem;
+  margin-right: 1.2rem;
+  border-radius: 1.2rem;
+  border-width: 0;
+}
+
+.active {
+  color: white;
+  background: #992439;
+}
+
+.top-button:hover {
+  transform: scale(0.95);
+}
+
+.top-button-inactive {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.375rem;
+  color: #2A2A2A;
+  border-radius: 1.2rem 0 0 1.2rem;
+  padding: 1.5625rem 6.1875rem;
+  margin-right: 1.2rem;
+}
+
+.grids-bottom-buttons {
+  display: grid;
+  margin: 5rem;
+  grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
+  gap: 3.44rem;
+}
+
+.grids-bottom-buttons > div {
+  height: 25rem;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2.1875rem;
+  margin-bottom: 3.6875rem;
+}
+
+.flex-container > img {
+  width: 8.125rem;
+  height: 8.125rem;
+}
+
+.code-name {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6875rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  background: rgba(82, 82, 82, 0.5);
+  border-radius: 0.3125rem;
+  height: 100%;
+  padding: 0.625rem 1.875rem;
+}
+
+.programm-name {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-left: 2.1875rem;
+  margin-bottom: 4.375rem;
+}
+
+.faculty {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6875rem;
+  line-height: 2.0625rem;
+  margin: 2.1875rem;
+  color: #A5A5A5;
+}
+
+.about {
+  position: relative;
+}
+
+.flex-about {
+  display: flex;
+  margin: 6.88rem 0 11.69rem 5rem;
+}
+
+.video {
+  background: url(../img/image\ 33video.png);
+  background-size: contain;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  background-repeat: no-repeat;
+  height: 28.125rem;
+  width: 53.125rem;
+  margin-right: 5rem;
+}
+
+.video > img {
+  width: 6.25rem;
+  height: 6.25rem;
+}
+
+.about-text {
+  position: relative;
+  width: 47.5rem;
+  height: 25rem;
+  display: grid;
+  align-self: end;
+}
+
+.about-heading {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 4.1875rem;
+  margin-bottom: 1.875rem;
+}
+
+.about-description {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  color: #7C7C7C;
+  margin-bottom: 1.875rem;
+}
+
+.about-button {
+  margin: 0;
+  bottom: auto;
+}
+
+.advantages-container {
+  width: 100vw;
+}
+
+.advantages-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advantages-text-card {
+  margin-left: 5rem;
+  max-width: 32.5rem;
+}
+
+.advantages-heading {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.625rem;
+  line-height: 3.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.advantages-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  color: #585858;
+  margin-bottom: 4.375rem;
+}
+
+.advantages-button {
+  display: inline-flex;
+}
+
+.button-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  color: #616161;
+  margin-right: 1.875rem;
+}
+
+.btn-line {
+  width: 4.375rem;
+  max-height: 0;
+  border: 0.125rem solid #992439;
+  margin-top: 0.875rem;
+}
+
+.advantages-cardbox {
+  display: -webkit-box;
+  overflow-y: scroll;
+  width: 66.875rem;
+  gap: 2.5rem;
+}
+
+.advantages-card {
+  padding: 1.875rem;
+  width: 26.25rem;
+  height: 31.25rem;
+  background: #FFFFFF;
+  box-shadow: 0.3125rem 0.3125rem 1.2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1.2rem;
+}
+
+.advantages-card :nth-child(1) {
+  margin-bottom: 3.75rem;
+  width: 8.125rem;
+  height: 8.125rem;
+}
+
+.advantages-card :nth-child(2) {
+  display: none;
+  margin-bottom: 3.75rem;
+  width: 8.125rem;
+  height: 8.125rem;
+}
+
+.advantages-card-heading {
+  margin-bottom: 1.2rem;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+}
+
+.advantages-card-text {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #727272;
+}
+
+.advantages-card:hover {
+  background: #992439;
+}
+
+.advantages-card:hover > .advantages-card-heading {
+  color: #FFF;
+}
+
+.advantages-card:hover > .advantages-card-text {
+  color: #FFF;
+}
+
+.advantages-card:hover > :nth-child(1) {
+  display: none;
+}
+
+.advantages-card:hover > :nth-child(2) {
+  display: initial;
+}
+
+.advantages-svgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.625rem;
+  margin-bottom: 7.1875rem;
+}
+
+.advantages-svgs :nth-child(1) {
+  margin-right: 4.5rem;
+  width: 0.625rem;
+  height: 1.25rem;
+}
+
+.advantages-svgs :nth-child(2) {
+  width: 0.625rem;
+  height: 1.25rem;
+  margin-right: 3.6875rem;
+}
+
+.advantages-svgs :nth-child(3) {
+  width: 8.75rem;
+  height: 0.625rem;
+}
+
+.footer-container {
+  width: 100vw;
+  background: #383838;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 6.25rem 6.25rem 0 6.25rem;
+}
+
+.footer-images {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.footer-images :nth-child(1) {
+  margin-bottom: 2.5rem;
+  width: 6.25rem;
+  height: 4.125rem;
+}
+
+.footer-images :nth-child(2) {
+  width: 15rem;
+  height: 2.5rem;
+}
+
+.footer-top > ul :nth-child(1) {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+}
+
+.footer-top > ul {
+  list-style: none;
+}
+
+.footer-top > ul > li {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: #BBBBBB;
+  margin-bottom: 1.875rem;
+}
+
+.footer-top > ul > li > img {
+  margin-right: 1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.rights {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  align-items: center;
+  text-align: center;
+  color: #DFDFDF;
+  margin-top: 8.125rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 425px) {
+  html {
+    font-size: 4vw;
+  }
+  .header {
+    height: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.25rem 0 1.25rem;
+  }
+  .header > :not(:first-child):not(:nth-child(2)) {
+    display: none;
+  }
+  .header_block {
+    flex-grow: initial;
+  }
+  .mobile-menu {
+    display: initial;
+    width: 1.875rem;
+    height: 1.25rem;
+  }
+  .mobile-menu > img {
+    width: 1.875rem;
+    height: 1.25rem;
+  }
+  .logo {
+    margin-left: 0;
+    width: 2.5rem;
+    height: 1.625rem;
+  }
+  .logo > img {
+    width: 2.5rem;
+    height: 1.625rem;
+  }
+  .description-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .description-container .description-img {
+    width: 20rem;
+    height: 28.75rem;
+    object-fit: cover;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
