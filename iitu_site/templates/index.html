@@ -98,207 +98,92 @@
         <hr class="chapter-heading-hr">
         <div class="chapter-heading">НАШИ ПАРТНЕРЫ</div>
         <div class="partner-images">
-            <img class="partner-img" src="../static/img/image 58redhat.png" alt="">
-            <img class="partner-img" src="../static/img/image 59Allvet.png" alt="">
-            <img class="partner-img" src="../static/img/image 60bolashak.png" alt="">
-            <img class="partner-img" src="../static/img/image 61sas.png" alt="">
-            <img class="partner-img" src="../static/img/image 62ibm.png" alt="">
+            {% for partner in partners_list %}
+                <img class="partner-img" src="../media/{{ partner.image }}" alt="">
+            {% endfor %}
         </div>
     </div>
     <div class="news">
         <hr class="chapter-heading-hr">
         <div class="chapter-heading">НОВОСТИ</div>
         <div class="news-images">
-            <div class="main-new">
-                <div class="main-new-text">
-                    <div class="main-new-date-box">
-                        25 сентября 2022
-                    </div>
-                    <div class="main-new-description">
-                        <div class="main-new-description-header">Студенты IITU вышли в Forbes</div>
-                        <div class="main-new-description-text">Высококвалифицированный профессорско-преподавательский состав, располагающий условиями для свободного научного поиска, творчества и максимально реализующий свой интеллектуальный </div>
+                <div class="main-new">
+                    <div class="main-new-text">
+                        <div class="main-new-date-box">
+                            {{ main_news.date }}
+                        </div>
+                        <div class="main-new-description">
+                            <div class="main-new-description-header">{{ main_news.title }}</div>
+                            <div class="main-new-description-text">{{ main_news.content }}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
             <img id="vertical-line" src="../static/img/Line 3vertical-line.svg" alt="">
             <div class="scrollable">
-               <div class="scrollable-block">
-                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
-                    <div class="date-box">28 октября 2022</div>
-                </div>
-                <div class="scrollable-text">
-                    <div class="scrollable-heading">Международный турнир</div>
-                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
-                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
-                </div>
-               </div>
-               <div class="scrollable-block">
-                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
-                    <div class="date-box">28 октября 2022</div>
-                </div>
-                <div class="scrollable-text">
-                    <div class="scrollable-heading">Международный турнир</div>
-                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
-                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
-                </div>
-               </div>
-               <div class="scrollable-block">
-                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
-                    <div class="date-box">28 октября 2022</div>
-                </div>
-                <div class="scrollable-text">
-                    <div class="scrollable-heading">Международный турнир</div>
-                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
-                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
-                </div>
-               </div>
-               <div class="scrollable-block">
-                <div class="scrollable-img-container"><img class="scrollable-img" src="../static/img/Rectangle 2640iitu.png" alt="">
-                    <div class="date-box">28 октября 2022</div>
-                </div>
-                <div class="scrollable-text">
-                    <div class="scrollable-heading">Международный турнир</div>
-                    <div class="scrollable-description">Международный турнир с нормой ММ с 20 по 28 февраля 2019 года посвященный Году молодежи в </div>
-                    <div><a class="scrollable-button" href="">Подробнее  ></a></div>
-                </div>
-               </div>
-            </div>
-        </div>
+                {% for news in news_list %}
+                    <div class="scrollable-block">
+                        <div class="scrollable-img-container"><img class="scrollable-img" src="../media/{{ news.image }}" alt="">
+                            <div class="date-box">{{ news.date }}</div>
+                        </div>
+                        <div class="scrollable-text">
+                            <div class="scrollable-heading">{{ news.title }}</div>
+                            <div class="scrollable-description">{{ news.content }} </div>
+                            <div><a class="scrollable-button" href="">Подробнее  ></a></div>
+                        </div>
+                    </div>
+                {% endfor %}
+             </div>
     </div>
     <div class="edu-programs">
         <hr class="chapter-heading-hr">
         <div class="chapter-heading">ОБРАЗОВАТЕЛЬНЫЕ ПРОГРАММЫ</div>
         <div class="edu-programs-grids">
             <div class="grids-top-buttons">
-                <button onclick="openCity(event, 'bach')" class="top-button active" href="">Бакалавриат</button>
-                <button onclick="openCity(event, 'mast')" class="top-button" href="">Магистратура</button>
-                <button onclick="openCity(event, 'dock')" class="top-button" href="">Докторантура</button>
+            <button onclick="openCity(event, 'bach')" class="top-button active" href=""> Бакалавриат </button>
+            <button onclick="openCity(event, 'mast')" class="top-button" href=""> Магистратура </button>
+            <button onclick="openCity(event, 'dock')" class="top-button" href=""> Докторантура </button>
             </div>
             <div id="bach" class="grids-bottom-buttons">
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1066management.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1066management.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1066management.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1066management.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1066management.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1066management.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
+                {% for program in programs_list %}
+                    {% if program.category_id == 1 %}
+                        <div class="gridcontainer">
+                            <div class="flex-container">
+                                <img src="../media/{{ program.icon }}" alt="">
+                                <div class="code-name" >{{ program.code }}</div>
+                            </div>
+                            <div class="programm-name" >{{ program.title }}</div>
+                            <div class="faculty">Факультеты: {{ program.faculties_count }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
             <div id="mast" class="grids-bottom-buttons" style="display: none;">
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1071.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1071.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1071.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1071.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1071.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
+                    {% for program in programs_list %}
+                        {% if program.category_id == 2 %}
+                        <div class="gridcontainer">
+                            <div class="flex-container">
+                                <img src="../media/{{ program.icon }}" alt="">
+                                <div class="code-name" >{{ program.code }}</div>
+                            </div>
+                            <div class="programm-name" >{{ program.title }}</div>
+                            <div class="faculty">Факультеты: {{ program.faculties_count }}</div>
+                        </div>
+                    {% endif %}
+                    {% endfor %}
             </div>
             <div id="dock" class="grids-bottom-buttons" style="display: none;">
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1067.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1067.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1067.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
-                <div class="gridcontainer">
-                    <div class="flex-container">
-                        <img src="../static/img/Group 1067.svg" alt="">
-                        <div class="code-name" >B044</div>
-                    </div>
-                    <div class="programm-name" >Менеджмент и управление</div>
-                    <div class="faculty">Факультеты: 2</div>
-                </div>
+                {% for program in programs_list %}
+                    {% if program.category_id == 3 %}
+                        <div class="gridcontainer">
+                            <div class="flex-container">
+                                <img src="../media/{{ program.icon }}" alt="">
+                                <div class="code-name" >{{ program.code }}</div>
+                            </div>
+                            <div class="programm-name" >{{ program.title }}</div>
+                            <div class="faculty">Факультеты: {{ program.faculties_count }}</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

@@ -41,9 +41,4 @@ def index(request):
         'programs_list': programs_list,
     }
 
-    print("header_nav_list:", header_nav_list)
-    print("header_dropdown_1_list:", header_dropdown_1_list)
-    print("header_dropdown_2_list:", header_dropdown_2_list)
-    print("header_dropdown_3_list:", header_dropdown_3_list)
-
     return render(request, 'index.html', context)
