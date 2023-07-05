@@ -384,15 +384,17 @@ right: 2.2rem;
 }
 
 .main-new{
-    background-image: url(../img/Rectangle\ 2636student.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     margin-right: 1.875rem;
     height: 51.25rem;
-    width: 56.25rem;;
+    width: 56.25rem;
     border-radius: 1.2rem;
+}
+
+.main-new > img{
+    height: 51.25rem;
+    width: 56.25rem;
+    object-fit: cover;
 }
 
 .news-image{
@@ -584,7 +586,7 @@ color: #2A2A2A;
 .grids-bottom-buttons {
     display: grid;
     margin: 5rem;
-    grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(33.6rem, 1fr));
     gap: 3.44rem;
 }
 
