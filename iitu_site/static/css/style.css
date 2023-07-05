@@ -106,10 +106,13 @@ html {
 .header_block:hover {
   font-family: "Montserrat";
   font-style: normal;
-  font-weight: 700;
+  text-shadow: 1px 0 0;
   font-size: 1.2rem;
   line-height: 1.5rem;
   color: #FFFFFF;
+  text-decoration-line: underline;
+  text-underline-offset: 0.67rem;
+  text-decoration-thickness: 0.25rem;
 }
 
 .dropdown {
@@ -140,15 +143,19 @@ html {
 .dropdown-element {
   padding: 1.2rem 0 1.2rem 1.2rem;
   color: #FFF;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-family: Montserrat;
+  font-style: normal;
   font-weight: 500;
+  line-height: normal;
 }
 
 .dropdown-element:hover {
   color: #FFF;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-family: Montserrat;
+  font-style: normal;
+  line-height: normal;
   font-weight: 700;
 }
 
@@ -987,8 +994,26 @@ html {
   color: #FFFFFF;
 }
 
+.footer-top > ul :nth-child(1):hover {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2rem;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
 .footer-top > ul {
   list-style: none;
+}
+
+.footer-top > ul > li:hover {
+  color: #FFF;
+  text-shadow: 0 0 1px #FFF;
+  text-decoration: underline;
+  text-underline-offset: 0.31rem;
+  text-decoration-thickness: 0.125rem;
 }
 
 .footer-top > ul > li {
