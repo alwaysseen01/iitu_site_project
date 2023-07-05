@@ -167,7 +167,7 @@ margin: 0 3.125rem 0 1.2rem;
     position: absolute;
     flex-direction: column;
     top:0;
-    left: 23.3125rem;
+    left: 23.27rem;
     background: rgba(0, 0, 0, 0.50);
 }
 
@@ -185,7 +185,7 @@ margin: 0 3.125rem 0 1.2rem;
     position: absolute;
     flex-direction: column;
     top:0;
-    left: 23.3125rem;
+    left: 23.27rem;
     background: rgba(0, 0, 0, 0.50);
 }
 
@@ -691,6 +691,10 @@ margin-bottom: 1.875rem;
     margin-bottom: 1.875rem;
 }
 
+.copy{
+    display: none;
+}
+
 .about-button{
     margin: 0;
     bottom: auto;
@@ -861,16 +865,24 @@ color: #727272;
     align-items: baseline;
 }
 
-.footer-images :nth-child(1){
-    margin-bottom: 2.5rem;
-    width: 6.25rem;
-height: 4.125rem;
+.socnet{
+    display: flex;
+    gap: 0.62rem;
 }
 
-.footer-images :nth-child(2){
-    width: 15rem;
+.socnet > img {
+    width: 2.5rem;
     height: 2.5rem;
+    
 }
+
+.footer-images > img{
+    margin-bottom: 2.5rem;
+    width: 6.25rem;
+    height: 4.125rem;
+}
+
+
 
 .footer-top > ul :nth-child(1){
     font-family: 'Gilroy';
@@ -972,4 +984,466 @@ padding-bottom: 2.5rem;
             object-fit: cover;
         }
     }
+
+    .description-left{
+        width: auto;
+        padding: 1.87rem 0 0 0;
+        
+
+        .descriptionbtn{   
+        margin-right: 0;
+        width: 22.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+            .heading{
+                color: #000;
+                font-size: 1.5rem;
+                font-family: SF Pro Display;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                width: 22.5rem;
+                height: 4.375rem;
+                margin-top: 1.87rem;
+            }
+
+            .description{
+                color: #454545;
+                font-size: 1rem;
+                font-family: Proxima Nova;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                width: 22.5rem;
+                height: 5.625rem;
+                margin-top: 0.94rem;
+            }
+
+            .button{
+                width: 22.5rem;
+                height: 3.75rem;
+                color: #FFF;
+                text-align: center;
+                font-size: 1.25rem;
+                font-family: SF Pro Display;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 3.75rem;
+            }
+        }
+
+        .counters{
+            display: none;
+        }
+    }
+
+    .chapter-heading-hr {
+         
+        border-top: 0.125rem solid #8F1812;
+
+    }
+    .chapter-heading {
+        color: #000;
+        font-size: 1.25rem;
+        font-family: SF Pro Display;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        left: 0.63rem;
+        top: -0.7625rem;
+        padding:0 0.63rem;
+        margin-left: 0;
+    }
+
+    .partners-scrollable {
+        width: 25rem;
+        overflow-x: scroll;
+
+        .partner-images {
+
+            justify-content: unset;
+            gap: 1.56rem;
+            padding: 3.19rem 0;
+
+            & > .partner-img{
+                height: 2.5rem;
+                max-width: 7.9375rem;
+                object-fit: contain;
+            }
+
+            & > :first-child{
+                margin-left: 1.56rem;
+            }
+
+            & > :last-child{
+                margin-right: 1.56rem;
+            }
+        }
+
+    }
+
+    .news-images{
+        padding: 0;
+
+        .main-new{
+            display: none;
+        }
+
+        #vertical-line{
+            display: none;
+        }
+
+        .scrollable{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+            height: auto;
+
+
+            .scrollable-block{
+                flex-direction: column;
+                width: auto;
+                height: auto;
+
+                .scrollable-text{
+                    width: 22.5rem;
+
+                    .scrollable-heading{
+                        color: #000;
+                        font-size: 1.25rem;
+                        font-family: SF Pro Display;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    .scrollable-description{
+                        color: #7C7C7C;
+                        font-size: 0.875rem;
+                        font-family: Gilroy;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                    .scrollable-button{
+                        color: #8F1812;
+                        font-size: 1.25rem;
+                        font-family: Proxima Nova;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+
+                .scrollable-img-container{
+                    .scrollable-img{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .grids-top-buttons {
+        margin: 1.25rem;
+        display: flex;
+        flex-direction: column;
+
+
+        .top-button {
+            width: 22.5rem;
+            height: 3.125rem;
+            padding: 0.62rem 14.06rem 0.62rem 1.25rem;
+
+            font-size: 1.25rem;
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            border-radius: 0.625rem;
+            align-self: baseline;
+        }
+
+        .top-button:hover{
+            transform: scale(100%);
+        }
+
+        .button:hover{
+            transform: scale(100%);
+        }
+        
+    }
+
+    .grids-bottom-buttons{
+        margin: 0;
+        grid-template-columns: 1fr;
+        gap: 1.54rem;
+        width: 17.625rem;
+        margin-left: 3.69rem;
+        margin-bottom: 3.48rem;
+
+        .gridcontainer {
+            height: 12.81819rem;
+            width: 17.625rem;
+            background: #FFF;
+            box-shadow: 0px 0px 2.0509090423583984px 0px rgba(82, 82, 82, 0.25);
+            .flex-container {
+                margin: 1.12rem;
+                margin-bottom: 2.21rem;
+
+                > img{
+                    width: 4.16594rem;
+                    height: 4.16594rem;
+                }
+                .code-name {
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 0.86525rem;
+                    font-family: SF Pro Display;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    border-radius: 0.16025rem;
+                    background: rgba(82, 82, 82, 0.50);
+                    height: 100%;
+                    padding: 0.32rem 0.96rem;
+                }
+            }
+            
+            .programm-name {
+                color: #333;
+                font-size: 1.02544rem;
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin-left: 1.12rem;
+                margin-bottom: 1.92rem;
+            }
+            .faculty {
+                color: #A5A5A5;
+                font-size: 0.86525rem;
+                font-family: Proxima Nova;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 1.12rem;
+            }
+        }
+        
+    }
+    
+    .flex-about {
+        flex-direction: column;
+        margin: 1.56rem 1.25rem;
+        .video {
+            width: 22.5rem;
+            height: 11.875rem;
+
+            > img{
+                width: 3.125rem;
+                height: 3.125rem;
+            }
+        }
+        .about-text {
+            height: auto;
+            width: auto;
+            .about-heading {
+                color: #000;
+                font-size: 1.5rem;
+                font-family: SF Pro Display;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin: 1.25rem 0 0.95rem;
+            }
+            .about-description {
+                color: #7C7C7C;
+                font-size: 0.875rem;
+                font-family: Gilroy;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 1.25rem;
+            }
+            .about-button {
+                width: 22.5rem;
+                height: 3.75rem;
+                border-radius: 0.3125rem;
+                background: #992439;
+                box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.10);
+
+                color: #FFF;
+                text-align: center;
+                font-size: 1.25rem;
+                font-family: SF Pro Display;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                margin-bottom: 5.31rem;
+            }
+
+            
+        }
+        
+    }
+    
+    .advantages-container {
+        .advantages-top {
+            flex-direction: column;
+            .advantages-text-card {
+                margin-left: 1.25rem;
+                .advantages-heading {
+                    color: #000;
+                    font-size: 1.5rem;
+                    font-family: SF Pro Display;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+                .advantages-text {
+                    display: none;
+                }
+                .advantages-button {
+                    display: none;
+                    .button-text {
+                    }
+                    .btn-line {
+                    }
+                }
+            }
+        }
+        .advantages-top{
+            align-items:baseline;
+        }
+        .advantages-cardbox {
+            overflow: scroll;
+            width: 25rem;
+            
+            .advantages-card {
+                width: 16.875rem;
+                height: 20rem;
+                padding: 1.25rem;
+
+                > img{
+                    width: 5.625rem;
+                    height: 5.625rem;
+                    margin-bottom: 1.25rem;
+                }
+                .advantages-card-heading {
+                    color: #000;
+                    font-size: 1rem;
+                    font-family: SF Pro Display;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin-bottom: 1.25rem;
+                }
+                .advantages-card-text {
+                    color: #727272;
+                    font-size: 0.75rem;
+                    font-family: Gilroy;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+        
+        .copy{
+            width: 22.5rem;
+            height: 5rem;
+            display: initial;
+            color: #7C7C7C;
+            font-size: 0.875rem;
+            font-family: Gilroy;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 1.87rem 0 8.12rem;
+        }
+    }
+    .advantages-svgs{display: none;}
+
+    .footer-container {
+        .footer-top {
+            padding: 3.12rem 0 0.06rem 2.19rem;
+            flex-direction: column;
+
+            .contacts{
+                order: 10;
+            }
+
+            .footer-images {
+                > img {
+                    width: 4.75rem;
+                    height: 3.125rem;
+                }
+
+                .socnet{
+                    gap: 0.63rem;
+                    .socnet-img{
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                }
+                
+                
+                margin-bottom: 2.5rem;
+            }
+            > ul{
+                :first-child{
+                    color: #FFF;
+                    font-size: 1.25rem;
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                }
+                > li{
+                    > img{
+                        margin-right: 1.56rem;
+                        position: relative;
+                        top: 0.5rem;
+
+                    }
+
+                    color: #BBB;
+                    font-size: 1rem;
+                    font-family: Montserrat;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;
+                    margin-bottom: 1.25rem;
+                }
+                
+                margin-bottom: 1.25rem;
+            }
+        }
+        .rights {
+            width: 22.5rem;
+            height: 3.75rem;
+
+            margin: 0 1.25rem;
+            padding: 0 0 1.25rem;
+
+
+            color: #DFDFDF;
+            text-align: center;
+            font-size: 1rem;
+            font-family: Montserrat;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+
+            display: flex;
+            align-items: center;
+        }
+    }
+    
 }
