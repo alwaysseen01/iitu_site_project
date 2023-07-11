@@ -20,9 +20,14 @@ def index(request):
     partners_list = Partners.objects.all()
     advantages_list = UniversityAdvantage.objects.all()
     contacts_list = ContactsElement.objects.all()
+
     footer_categories = FooterElementCategory.objects.all()
-    footer_elements = FooterElement.objects.all()
+    footer_elements = dict()
+    for category in footer_categories:
+        footer_elements_temp = FooterElement.objects.filter(category=category)
+        footer_elements[category] = footer_elements_temp
     categories_list = Category.objects.all()
+
     programs_list = EducationalProgram.objects.all()
 
     context = {

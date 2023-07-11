@@ -133,6 +133,7 @@
                     </div>
                 {% endfor %}
              </div>
+        </div>
     </div>
     <div class="edu-programs">
         <hr class="chapter-heading-hr">
@@ -212,24 +213,14 @@
                 </div>
             </div>
             <div class="advantages-cardbox">
-                <div class="advantages-card">
-                    <img src="../static/img/Rectangle 2672a.svg" alt="">
-                    <img src="../static/img/Frame 52circle.svg" alt="">
-                    <div class="advantages-card-heading">Высокий научно-педагогический потенциал</div>
-                    <div class="advantages-card-text">МУИТ является единственным ВУЗом в Казахстане, получившим в 2019 году институциональную международную аккредитацию ASIIN</div>
-                </div>
-                <div class="advantages-card">
-                    <img src="../static/img/Rectangle 2672a.svg" alt="">
-                    <img src="../static/img/Frame 52circle.svg" alt="">
-                    <div class="advantages-card-heading">Высокий научно-педагогический потенциал</div>
-                    <div class="advantages-card-text">МУИТ является единственным ВУЗом в Казахстане, получившим в 2019 году институциональную международную аккредитацию ASIIN</div>
-                </div>
-                <div class="advantages-card">
-                    <img src="../static/img/Rectangle 2672a.svg" alt="">
-                    <img src="../static/img/Frame 52circle.svg" alt="">
-                    <div class="advantages-card-heading">Высокий научно-педагогический потенциал</div>
-                    <div class="advantages-card-text">МУИТ является единственным ВУЗом в Казахстане, получившим в 2019 году институциональную международную аккредитацию ASIIN</div>
-                </div>
+                {% for advantage_card in advantages_list %}
+                    <div class="advantages-card">
+                        <img src="../media/{{ advantage_card.icon }}" alt="">
+                        <img src="../media/{{ advantage_card.on_hover_icon }}" alt="">
+                        <div class="advantages-card-heading">{{ advantage_card.title }}</div>
+                        <div class="advantages-card-text">{{ advantage_card.content }}</div>
+                    </div>
+                {% endfor %}
             </div>
         </div>
         <div class="advantages-svgs">
@@ -240,39 +231,24 @@
     </div>
     <div class="footer-container">
         <div class="footer-top">
-        <div class="footer-images">
-            <img src="../static/img/image 58logo.png" alt="">
-            <img src="../static/img/Group 3652 (1).svg" alt="">
-        </div>
-        <ul>
-            <li>CONTACTS</li>
-            {% for contact in contacts_list %}
-                <li><img class="no-bottom" src="{% get_media_prefix %} {{ contact.icon }}" alt="">{{ contact.title }}</li>
+            <div class="footer-images">
+                <img src="../static/img/image 58logo.png" alt="">
+                <img src="../static/img/Group 3652 (1).svg" alt="">
+            </div>
+            <ul>
+                <li>Контакты</li>
+                {% for contact in contacts_list %}
+                    <li><img class="no-bottom" src="../media/{{ contact.icon }}" alt="">{{ contact.title }}</li>
+                {% endfor %}
+            </ul>
+            {% for category, elements in footer_elements.items %}
+                <ul>
+                    <li>{{ category.title }}</li>
+                    {% for element in elements %}
+                        <li>{{ element.title }}</li>
+                    {% endfor %}
+                </ul>
             {% endfor %}
-            <li>КОНТАКТЫ</li>
-            <li><img class="no-bottom" src="../static/img/Group 3646mail.svg" alt="">info@iitu.kz</li>
-            <li><img class="no-bottom" src="../static/img/Group 3643phone.svg" alt="">+7 (727) 244 51 03</li>
-            <li><img class="no-bottom" src="../static/img/Group 3638location.svg" alt="">Манаса 34/1</li>
-        </ul>
-        <ul>
-            <li>ОБ УНИВЕРСИТЕТЕ</li>
-            <li>Приемная коммиссия</li>
-            <li>Миссия и Стратегия</li>
-            <li>COVID-19</li>
-            <li>3D Tour</li>
-        </ul>
-        <ul>
-            <li>СТУДЕНТАМ</li>
-            <li>Студенческие организации</li>
-            <li>Внутренняя Почта</li>
-            <li>Ящик доверия</li>
-            <li>dl</li>
-        </ul>
-        <ul>
-            <li>СОТРУДНИЧЕСТВО</li>
-            <li>Академическая мобильность</li>
-            <li>Партнеры</li>
-        </ul>
         </div>
         <div class="rights">Copyright All Rights Reserved 2022, International IT University</div>
     </div>

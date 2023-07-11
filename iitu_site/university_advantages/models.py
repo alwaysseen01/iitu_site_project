@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 class UniversityAdvantage(models.Model):
     icon = models.ImageField(upload_to='advantages_icons/')
+    on_hover_icon = models.ImageField(upload_to='advantages_icons/', default='')
     title = models.CharField(max_length=255)
     content = models.TextField()
 
