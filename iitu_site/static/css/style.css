@@ -845,6 +845,12 @@ html {
   overflow-y: scroll;
   width: 66.875rem;
   gap: 2.5rem;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.advantages-cardbox::-webkit-scrollbar {
+  display: none;
 }
 
 .advantages-card {
@@ -926,12 +932,16 @@ html {
   margin-right: 4.5rem;
   width: 0.625rem;
   height: 1.25rem;
+  background: none;
+  border: none;
 }
 
 .advantages-svgs :nth-child(2) {
   width: 0.625rem;
   height: 1.25rem;
   margin-right: 3.6875rem;
+  background: none;
+  border: none;
 }
 
 .advantages-svgs :nth-child(3) {
